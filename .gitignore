@@ -1,0 +1,13 @@
+.venv/
+outputs/
+build/
+dist/
+*.spec
+__pycache__/
+*.py[cod]
+FrameCraft.settings.json
+assets/*.otf
+tests/ui-preview.png
+tests/manager-preview.png
+.idea/
+.vscode/

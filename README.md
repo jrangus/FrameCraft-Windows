@@ -1,31 +1,42 @@
-# 甯у奖 FrameCraft
+# 帧影 FrameCraft
 
 ![Build](https://github.com/jrangus/FrameCraft-Windows/actions/workflows/release-windows.yml/badge.svg)
 
-甯у奖鏄竴娆鹃潰鍚?Windows 10/11 64 浣嶇郴缁熺殑渚挎惡瑙嗛鍘熷甯у鍑哄伐鍏枫€傚畠鐩存帴淇濆瓨瑙嗛瑙ｇ爜鍚庣殑褰撳墠甯э紝涓嶆埅鍙栧睆骞曪紝涔熶笉浼氭妸缂╂斁鍚庣殑棰勮鍥惧綋浣滄埅鍥句繚瀛樸€?
-## 涓嬭浇
+帧影是一款面向 Windows 10/11 64 位系统的便携视频原始帧导出工具。它直接保存视频解码后的当前帧，不截取屏幕，也不会把缩放后的预览图当作截图保存。
 
-鍓嶅線 [Releases](https://github.com/jrangus/FrameCraft-Windows/releases/latest) 涓嬭浇 `甯у奖-FrameCraft-Windows渚挎惡鐗?zip`锛岃В鍘嬪悗鍙屽嚮 `甯у奖 FrameCraft.exe`銆?
-澶嶅埗鍒板叾浠栫數鑴戞椂璇峰鍒舵暣涓В鍘嬬洰褰曪紝涓嶈鍙鍒?EXE銆?
-## 鍔熻兘
+## 下载
 
-- 鎵撳紑鎴栨嫋鍏?MP4銆丮KV銆丮OV銆丄VI銆乄ebM 绛夊父瑙佽棰戙€?- 鏃堕棿杞村畾浣嶃€侀€愬抚鍓嶅悗绉诲姩銆佸墠鍚庤烦杞竴绉掋€?- 鎸夊師濮嬪儚绱犲昂瀵稿鍑?PNG銆乀IFF 鎴?BMP銆?- 鏈湴鏅鸿兘绛涢€夋渶澶?8 涓簿褰╁抚鍊欓€夛紝涓嶄笂浼犺棰戙€佷笉闇€瑕?API銆?- 绮鹃€夊抚绠＄悊鍣ㄦ彁渚涘ぇ鍥炬煡鐪嬨€佸嬀閫夈€佸叏閫夈€佹壒閲忎繚瀛樸€佺Щ闄ゃ€佹竻绌哄拰閲嶆柊鍒嗘瀽銆?- 鐐瑰嚮鍊欓€夊抚鍙細鍒囨崲澶у浘涓庝富绐楀彛棰勮锛屽€欓€夊垪琛ㄤ笉浼氫涪澶憋紱鍏抽棴鍚庡彲鍐嶆鎵撳紑銆?- 鏀寔涓枃鏂囦欢鍚嶅拰涓枃璺緞锛岃嚜甯﹀紑婧愪腑鏂囧瓧浣撱€?
-## 鐣岄潰
+前往 [Releases](https://github.com/jrangus/FrameCraft-Windows/releases/latest) 下载 `帧影-FrameCraft-Windows便携版.zip`，解压后双击 `帧影 FrameCraft.exe`。
 
-![涓荤獥鍙(docs/main-window.png)
+复制到其他电脑时请复制整个解压目录，不要只复制 EXE。
 
-![绮鹃€夊抚绠＄悊鍣╙(docs/candidate-manager.png)
+## 功能
 
-## 蹇嵎閿?
-| 蹇嵎閿?| 鍔熻兘 |
+- 打开或拖入 MP4、MKV、MOV、AVI、WebM 等常见视频。
+- 时间轴定位、逐帧前后移动、前后跳转一秒。
+- 按原始像素尺寸导出 PNG、TIFF 或 BMP。
+- 本地智能筛选最多 8 个精彩帧候选，不上传视频、不需要 API。
+- 精选帧管理器提供大图查看、勾选、全选、批量保存、移除、清空和重新分析。
+- 点击候选帧只会切换大图与主窗口预览，候选列表不会丢失；关闭后可再次打开。
+- 支持中文文件名和中文路径，自带开源中文字体。
+
+## 界面
+
+![主窗口](docs/main-window.png)
+
+![精选帧管理器](docs/candidate-manager.png)
+
+## 快捷键
+
+| 快捷键 | 功能 |
 | --- | --- |
-| `Ctrl+O` | 鎵撳紑瑙嗛 |
-| `Ctrl+S` | 淇濆瓨褰撳墠甯?|
-| `Space` | 鎾斁鎴栨殏鍋?|
-| `鈫恅 / `鈫抈 | 涓婁竴甯?/ 涓嬩竴甯?|
-| `Shift+鈫恅 / `Shift+鈫抈 | 鍓嶅悗璺宠浆涓€绉?|
+| `Ctrl+O` | 打开视频 |
+| `Ctrl+S` | 保存当前帧 |
+| `Space` | 播放或暂停 |
+| `←` / `→` | 上一帧 / 下一帧 |
+| `Shift+←` / `Shift+→` | 前后跳转一秒 |
 
-## 浠庢簮浠ｇ爜杩愯
+## 从源代码运行
 
 ```powershell
 python -m venv .venv
@@ -33,17 +44,20 @@ python -m venv .venv
 .\.venv\Scripts\python.exe framecraft.py
 ```
 
-鏋勫缓渚挎惡鐗堬細
+构建便携版：
 
 ```powershell
 .\build_portable.ps1
 ```
 
-## 鈥滄棤鎹熲€濈殑杈圭晫
+## “无损”的边界
 
-PNG銆乀IFF銆丅MP 淇濆瓨杩囩▼涓笉浼氬啀娆℃崯澶卞儚绱狅紝瀵煎嚭灏哄涓庡綋鍓嶈棰戣В鐮佸抚涓€鑷淬€傝棰戝鏋滃師鏈娇鐢?H.264銆丠.265 绛夋湁鎹熺紪鐮侊紝杞欢鏃犳硶鎭㈠缂栫爜涔嬪墠宸茬粡涓㈠け鐨勭粏鑺傘€傚綋鍓嶇増鏈潰鍚戝父瑙?8-bit SDR 瑙嗛锛汬DR/10-bit 涓撲笟鑹插僵宸ヤ綔娴佸皻鏈敮鎸併€?
-## 闅愮涓?AI
+PNG、TIFF、BMP 保存过程中不会再次损失像素，导出尺寸与当前视频解码帧一致。视频如果原本使用 H.264、H.265 等有损编码，软件无法恢复编码之前已经丢失的细节。当前版本面向常规 8-bit SDR 视频；HDR/10-bit 专业色彩工作流尚未支持。
 
-瑙嗛鍜屾櫤鑳界瓫閫夎繃绋嬪叏閮ㄥ湪鏈満瀹屾垚銆傚綋鍓嶇簿褰╁抚绛涢€夌患鍚堟竻鏅板害銆佹洕鍏夈€佸姣斿害銆侀ケ鍜屽害鍜岀敾闈㈠彉鍖栵紝涓嶈皟鐢ㄤ簯绔?AI API銆?
-## 绗笁鏂圭粍浠?
-椤圭洰浣跨敤 PySide6銆丱penCV銆丯umPy锛屽苟闅忕▼搴忓垎鍙?Noto Sans CJK SC 瀛椾綋銆傚瓧浣撹鍙瘉瑙?[`assets/Noto-CJK-LICENSE.txt`](assets/Noto-CJK-LICENSE.txt)銆?
+## 隐私与 AI
+
+视频和智能筛选过程全部在本机完成。当前精彩帧筛选综合清晰度、曝光、对比度、饱和度和画面变化，不调用云端 AI API。
+
+## 第三方组件
+
+项目使用 PySide6、OpenCV、NumPy，并随程序分发 Noto Sans CJK SC 字体。字体许可证见 [`assets/Noto-CJK-LICENSE.txt`](assets/Noto-CJK-LICENSE.txt)。

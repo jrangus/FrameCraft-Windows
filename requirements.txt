@@ -1,0 +1,4 @@
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+PySide6-Essentials==6.11.2
+pyinstaller==6.22.3
