@@ -35,11 +35,11 @@ jobs:
           python tests/integration_test.py
 
       - name: Build portable Windows package
-        shell: powershell
+        shell: pwsh
         run: .\build_portable.ps1
 
       - name: Publish GitHub Release
-        shell: powershell
+        shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
