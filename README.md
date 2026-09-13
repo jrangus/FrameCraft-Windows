@@ -6,7 +6,7 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/jrangus/FrameCraft-Windows/releases/latest) 下载 `帧影-FrameCraft-Windows便携版.zip`，解压后双击 `帧影 FrameCraft.exe`。
+前往 [Releases](https://github.com/jrangus/FrameCraft-Windows/releases/latest) 下载 `FrameCraft-Windows-Portable-v1.1.0.zip`，解压后双击 `帧影 FrameCraft.exe`。
 
 复制到其他电脑时请复制整个解压目录，不要只复制 EXE。
 

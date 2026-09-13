@@ -32,7 +32,7 @@ python -m PyInstaller `
 Copy-Item -LiteralPath (Join-Path $ProjectDir 'README.md') -Destination (Join-Path $DistDir '帧影 FrameCraft\使用说明.md') -Force
 Copy-Item -LiteralPath (Join-Path $ProjectDir 'assets\Noto-CJK-LICENSE.txt') -Destination (Join-Path $DistDir '帧影 FrameCraft\Noto-CJK-LICENSE.txt') -Force
 
-$ZipPath = Join-Path $DistDir '帧影-FrameCraft-Windows便携版.zip'
+$ZipPath = Join-Path $DistDir 'FrameCraft-Windows-Portable-v1.1.0.zip'
 if (Test-Path -LiteralPath $ZipPath) {
     Remove-Item -LiteralPath $ZipPath -Force
 }

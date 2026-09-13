@@ -43,7 +43,20 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create v1.1.0 `
-            "outputs\帧影-FrameCraft-Windows便携版.zip" `
-            --title "帧影 FrameCraft v1.1.0" `
-            --notes-file RELEASE_NOTES.md
+          $asset = "outputs\FrameCraft-Windows-Portable-v1.1.0.zip"
+          if (gh release view v1.1.0 2>$null) {
+            $oldAssetId = gh api "repos/${{ github.repository }}/releases/tags/v1.1.0" `
+              --jq '.assets[] | select(.name == "-FrameCraft-Windows.zip") | .id'
+            if ($oldAssetId) {
+              gh api --method DELETE "repos/${{ github.repository }}/releases/assets/$oldAssetId"
+            }
+            gh release edit v1.1.0 `
+              --title "帧影 FrameCraft v1.1.0" `
+              --notes-file RELEASE_NOTES.md
+            gh release upload v1.1.0 $asset --clobber
+          }
+          else {
+            gh release create v1.1.0 $asset `
+              --title "帧影 FrameCraft v1.1.0" `
+              --notes-file RELEASE_NOTES.md
+          }
